@@ -9,7 +9,7 @@ namespace AutofacStrategyPattern
     {
         public int UserId { get; set; }
 
-        public void Do()
+        public void DoSomething()
         {
         }
     }

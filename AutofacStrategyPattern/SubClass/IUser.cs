@@ -8,6 +8,6 @@ namespace AutofacStrategyPattern
     public interface IUser
     {
         int UserId { get; set; }
-        void Do();
+        void DoSomething();
     }
 }

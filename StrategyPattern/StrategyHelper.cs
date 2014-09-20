@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using Autofac;
 using Autofac.Core;
 
-namespace Factory
+namespace StrategyPattern
 {
     public class StrategyHelper<TBaseClass, TInterface>
     {
@@ -23,7 +23,7 @@ namespace Factory
         }
         #endregion
         #region Class to be create
-        public Dictionary<string, TInterface> DicClass = new Dictionary<string, TInterface>();
+        public Dictionary<string, TInterface> AllClasses = new Dictionary<string, TInterface>();
         private List<ClassType> _ListClass = new List<ClassType>();
         private List<ClassType> ListClass
         {
@@ -89,7 +89,7 @@ namespace Factory
         {
             foreach (ClassType item in this.ListClass.OrderBy(x => x.Sequence))
             {
-                this.DicClass.Add(item.TypeName, this.MyContainer.ResolveNamed<TInterface>(item.TypeName));
+                this.AllClasses.Add(item.TypeName, this.MyContainer.ResolveNamed<TInterface>(item.TypeName));
             }
         }
         #endregion
