@@ -1,15 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-using Autofac;
-using Autofac.Core;
-
-namespace StrategyPattern
+﻿namespace StrategyPattern
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Linq.Expressions;
+    using System.Reflection;
+    using System.Text;
+    using System.Threading.Tasks;
+    using Autofac;
+    using Autofac.Core;
+
     public class StrategyHelper<TBaseClass, TInterface>
     {
         #region Properties
